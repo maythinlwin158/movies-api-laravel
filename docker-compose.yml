@@ -1,0 +1,41 @@
+version: '3.8'
+
+networks:
+  movie:
+    name: movie
+
+services: 
+  php:
+    container_name: movie_php
+    build:
+      context: ./php/
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - movie
+
+  nginx:
+    container_name: movie_nginx
+    build:
+      context: ./nginx/
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8080:80
+    networks:
+      - movie
+  
+  mysql:
+    image: mysql:8.0.32
+    container_name: movie_mysql
+    environment:
+      MYSQL_DATABASE: movie
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - movie
