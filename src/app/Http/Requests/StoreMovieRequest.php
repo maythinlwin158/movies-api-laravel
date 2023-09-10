@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rules\File;
 
 class StoreMovieRequest extends FormRequest
 {
@@ -29,8 +28,8 @@ class StoreMovieRequest extends FormRequest
             'cover_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'genre_id' => 'required|integer|exists:genres,id',
             'author_id' => 'required|integer|exists:authors,id',
+            'tag_ids' => 'required|array',
             'imdb_rating' => 'integer|between:1,5',
-            'pdf_link' => 'nullable|string'
         ];
     }
 }

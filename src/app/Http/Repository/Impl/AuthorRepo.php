@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 class AuthorRepo implements AuthorRepoInterface
 {
-    public function getAuthor(): Collection
+    public function getAuthors(): Collection
     {
         return Author::all();
     }

@@ -2,65 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repository\CommentRepoInterface;
 use App\Http\Requests\StoreCommentRequest;
-use App\Http\Requests\UpdateCommentRequest;
-use App\Models\Comment;
+use App\Models\Movie;
+use Illuminate\Http\JsonResponse;
 
+/**
+ * @group Comment
+ *
+ * APIs for managing comments.
+ */
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    private CommentRepoInterface $commentRepo;
+
+    public function __construct(CommentRepoInterface $commentRepo)
     {
-        //
+        $this->commentRepo = $commentRepo;
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Store a new comment for a movie.
+     *
+     * @bodyParam body string required The body of the comment.
+     * @bodyParam commenter_email string required email The email of the commenter.
+     * @urlParam movie_id integer required The ID of the movie.
+     *
+     * @return JsonResponse
+     * @response {"status":200,"message":"Saved"}
      */
-    public function create()
+    public function store(StoreCommentRequest $request, Movie $movie): JsonResponse
     {
-        //
-    }
+        $this->commentRepo->saveComment($request->validated(), $movie);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreCommentRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateCommentRequest $request, Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Comment $comment)
-    {
-        //
+        return response()->json([
+            'status' => 200,
+            'message' => 'Saved'
+        ]);
     }
 }

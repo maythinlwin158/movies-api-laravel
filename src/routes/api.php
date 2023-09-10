@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\TagController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GenreController;
 
@@ -19,27 +19,24 @@ use App\Http\Controllers\GenreController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+
 Route::get('/genres', [GenreController::class, 'index'])->name('index');
 Route::get('/authors', [AuthorController::class, 'index'])->name('index');
 Route::get('/tags', [TagController::class, 'index'])->name('index');
 
-// Registration and Login
-Route::post('register', [AuthController::class, 'register']);
-Route::post('login', [AuthController::class, 'login']);
+Route::resource('/movies', MovieController::class)->only([
+    'index', 'show'
+]);
 
-// Protected routes with middleware
+Route::post('/movies/{movie}/comments', [CommentController::class, 'store']);
+
 Route::middleware(['auth:api'])->group(function () {
-    // Get user details
-    Route::get('user', 'AuthController@user');
+    Route::resource('/movies', MovieController::class)->only([
+        'store', 'destroy'
+    ]);
 
-    Route::resource('/movies', MovieController::class);
-
-    // Logout user
-    Route::post('logout', 'AuthController@logout');
+    Route::post('/movies/{movie}', [MovieController::class, 'update'])->name('update');
+    Route::post('logout', [AuthController::class, 'logout']);
 });
-
-// If you want to provide a route for refreshing tokens
-Route::post('refresh', 'AuthController@refresh');

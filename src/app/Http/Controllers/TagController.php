@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Repository\AuthorRepoInterface;
 use App\Http\Repository\TagRepoInterface;
-use App\Http\Resources\GenreResource;
+use App\Http\Resources\TagResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+/**
+ * @group Tag
+ *
+ * APIs for managing tags.
+ */
 class TagController extends Controller
 {
     private TagRepoInterface $tagRepo;
@@ -15,12 +20,15 @@ class TagController extends Controller
         $this->tagRepo = $tagRepo;
     }
     /**
-     * Display a listing of the resource.
+     * Get all tags
+     *
+     * @return AnonymousResourceCollection
+     * @response {"data":[{"id":1,"name":"Movie"},{"id":2,"name":"Series"}],"success":true,"message":"success"}
      */
-    public function index()
+    public function index(): AnonymousResourceCollection
     {
         $tags = $this->tagRepo->getTags();
-        return GenreResource::collection($tags)->additional([
+        return TagResource::collection($tags)->additional([
             'success' => true,
             'message' => 'success'
         ]);

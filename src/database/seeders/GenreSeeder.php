@@ -14,6 +14,41 @@ class GenreSeeder extends Seeder
      */
     public function run(): void
     {
-        Genre::factory(5)->create();
+        $genres = [
+            [
+                'name' => 'Action',
+            ],
+            [
+                'name' => 'Superhero',
+            ],
+            [
+                'name' => 'Comedy',
+            ],
+            [
+                'name' => 'Crime',
+            ],
+            [
+                'name' => 'Drama',
+            ],
+            [
+                'name' => 'Fantasy',
+            ],
+            [
+                'name' => 'Historical',
+            ],
+            [
+                'name' => 'Historical fiction',
+            ],
+            [
+                'name' => 'Horror',
+            ],
+            [
+                'name' => 'Magical realism',
+            ]
+        ];
+
+        foreach ($genres as $genre) {
+            Genre::create($genre);
+        }
     }
 }

@@ -4,5 +4,5 @@ namespace App\Http\Repository;
 
 interface AuthorRepoInterface
 {
-    public function getAuthor();
+    public function getAuthors();
 }

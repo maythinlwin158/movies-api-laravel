@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Repository\AuthorRepoInterface;
-use App\Http\Resources\GenreResource;
+use App\Http\Resources\AuthorResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
+/**
+ * @group Author
+ *
+ * APIs for managing authors.
+ */
 class AuthorController extends Controller
 {
     private AuthorRepoInterface $authorRepo;
@@ -13,13 +19,17 @@ class AuthorController extends Controller
     {
         $this->authorRepo = $authorRepo;
     }
+
     /**
-     * Display a listing of the author.
+     * Get all authors
+     *
+     * @return AnonymousResourceCollection
+     * @response {"data":[{"id":1,"name":"Greta Gerwig"},{"id":2,"name":"Marry"}],"success":true,"message":"success"}
      */
-    public function index()
+    public function index(): AnonymousResourceCollection
     {
-        $authors = $this->authorRepo->getAuthor();
-        return GenreResource::collection($authors)->additional([
+        $authors = $this->authorRepo->getAuthors();
+        return AuthorResource::collection($authors)->additional([
             'success' => true,
             'message' => 'success'
         ]);

@@ -19,10 +19,12 @@ class MovieResource extends JsonResource
             'title' => $this->title,
             'summary' => $this->summary,
             'cover_image' => $this->cover_image,
-            'genre_id' => $this->genre_id,
-            'author_id' => $this->author_id,
             'imdb_rating' => $this->imdb_rating,
-            'pdf_link' => $this->pdf_link
+            'pdf_link' => $this->pdf_link,
+            'genre' => new GenreResource($this->whenLoaded('genre')),
+            'author' => new AuthorResource($this->whenLoaded('author')),
+            'tags' => TagResource::collection($this->whenLoaded('tags')),
+            'comments' => CommentResource::collection($this->whenLoaded('comments')),
         ];
     }
 }

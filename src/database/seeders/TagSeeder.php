@@ -12,6 +12,26 @@ class TagSeeder extends Seeder
      */
     public function run(): void
     {
-        Tag::factory(5)->create();
+        $tags = [
+            [
+            'name' => 'Movie',
+            ],
+            [
+                'name' => 'Series',
+            ],
+            [
+                'name' => 'Ghost Story',
+            ],
+            [
+                'name' => 'Cartoon',
+            ],
+            [
+                'name' => 'Thriller',
+            ]
+        ];
+
+        foreach ($tags as $tag) {
+            Tag::create($tag);
+        }
     }
 }
