@@ -17,12 +17,14 @@ Follow these steps to set up the project:
 docker-compose build
 ```
 
-### 2. Start Docker Containers
+### 2. Start Docker Containers and copy .env.example to .env
 This will start the necessary containers in detached mode:
 
 ```bash
 docker-compose up -d
+cp /src/.env.example .env
 ```
+
 ### 3. Enter the PHP Container
 To execute commands inside the PHP container:
 
@@ -36,6 +38,7 @@ Once inside the PHP container:
 ```bash
 composer install
 ```
+
 ###  5. Generate Application Key
 This will generate a unique application key:
 
@@ -63,6 +66,7 @@ This will create a symbolic link from public/storage to storage/app/public:
 ```bash
 php artisan storage:link
 ```
+
 ### 9. Start Queue Worker
 This will start the Laravel queue worker:
 
