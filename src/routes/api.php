@@ -22,9 +22,9 @@ use App\Http\Controllers\GenreController;
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
-Route::get('/genres', [GenreController::class, 'index'])->name('index');
-Route::get('/authors', [AuthorController::class, 'index'])->name('index');
-Route::get('/tags', [TagController::class, 'index'])->name('index');
+Route::get('/genres', [GenreController::class, 'index']);
+Route::get('/authors', [AuthorController::class, 'index']);
+Route::get('/tags', [TagController::class, 'index']);
 
 Route::resource('/movies', MovieController::class)->only([
     'index', 'show'
@@ -37,6 +37,6 @@ Route::middleware(['auth:api'])->group(function () {
         'store', 'destroy'
     ]);
 
-    Route::post('/movies/{movie}', [MovieController::class, 'update'])->name('update');
+    Route::post('/movies/{movie}', [MovieController::class, 'update']);
     Route::post('logout', [AuthController::class, 'logout']);
 });

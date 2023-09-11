@@ -147,7 +147,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 10, 2023</li>
+        <li>Last updated: September 11, 2023</li>
     </ul>
 </div>
 
@@ -156,7 +156,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://localhost:8080</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -182,20 +182,20 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/register" \
+    "http://localhost:8080/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"eaque\",
-    \"email\": \"diego.hermiston@example.org\",
-    \"password\": \"c&gt;(@9CEoGGs}k&lt;4\"
+    \"name\": \"atque\",
+    \"email\": \"cfritsch@example.net\",
+    \"password\": \"|y[)Gg\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/register"
+    "http://localhost:8080/api/register"
 );
 
 const headers = {
@@ -204,9 +204,9 @@ const headers = {
 };
 
 let body = {
-    "name": "eaque",
-    "email": "diego.hermiston@example.org",
-    "password": "c&gt;(@9CEoGGs}k&lt;4"
+    "name": "atque",
+    "email": "cfritsch@example.net",
+    "password": "|y[)Gg"
 };
 
 fetch(url, {
@@ -289,10 +289,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="eaque"
+               value="atque"
                data-component="body">
     <br>
-<p>The name of the user. Example: <code>eaque</code></p>
+<p>The name of the user. Example: <code>atque</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -300,10 +300,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="diego.hermiston@example.org"
+               value="cfritsch@example.net"
                data-component="body">
     <br>
-<p>The email of the user. Example: <code>diego.hermiston@example.org</code></p>
+<p>The email of the user. Example: <code>cfritsch@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -311,10 +311,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="c>(@9CEoGGs}k<4"
+               value="|y[)Gg"
                data-component="body">
     <br>
-<p>The password of the user. Example: <code>c&gt;(@9CEoGGs}k&lt;4</code></p>
+<p>The password of the user. Example: <code>|y[)Gg</code></p>
         </div>
         </form>
 
@@ -331,19 +331,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/login" \
+    "http://localhost:8080/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"edna11@example.net\",
-    \"password\": \"6b\'&lt;aG8q`f,i+$\"
+    \"email\": \"noemie58@example.com\",
+    \"password\": \"2jrON\\\"?n.3X\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/login"
+    "http://localhost:8080/api/login"
 );
 
 const headers = {
@@ -352,8 +352,8 @@ const headers = {
 };
 
 let body = {
-    "email": "edna11@example.net",
-    "password": "6b'&lt;aG8q`f,i+$"
+    "email": "noemie58@example.com",
+    "password": "2jrON\"?n.3X"
 };
 
 fetch(url, {
@@ -436,10 +436,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="edna11@example.net"
+               value="noemie58@example.com"
                data-component="body">
     <br>
-<p>The email of the user. Example: <code>edna11@example.net</code></p>
+<p>The email of the user. Example: <code>noemie58@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -447,10 +447,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="6b'<aG8q`f,i+$"
+               value="2jrON"?n.3X"
                data-component="body">
     <br>
-<p>The password of the user. Example: <code>6b'&lt;aG8q</code>f,i+$`</p>
+<p>The password of the user. Example: <code>2jrON"?n.3X</code></p>
         </div>
         </form>
 
@@ -468,14 +468,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/logout" \
+    "http://localhost:8080/api/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/logout"
+    "http://localhost:8080/api/logout"
 );
 
 const headers = {
@@ -573,14 +573,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/authors" \
+    --get "http://localhost:8080/api/authors" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/authors"
+    "http://localhost:8080/api/authors"
 );
 
 const headers = {
@@ -688,19 +688,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/movies/19/comments" \
+    "http://localhost:8080/api/movies/11/comments" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"body\": \"laudantium\",
-    \"commenter_email\": \"aida.kris@example.org\"
+    \"body\": \"nostrum\",
+    \"commenter_email\": \"zoconnell@example.net\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies/19/comments"
+    "http://localhost:8080/api/movies/11/comments"
 );
 
 const headers = {
@@ -709,8 +709,8 @@ const headers = {
 };
 
 let body = {
-    "body": "laudantium",
-    "commenter_email": "aida.kris@example.org"
+    "body": "nostrum",
+    "commenter_email": "zoconnell@example.net"
 };
 
 fetch(url, {
@@ -792,10 +792,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="movie_id"                data-endpoint="POSTapi-movies--movie_id--comments"
-               value="19"
+               value="11"
                data-component="url">
     <br>
-<p>The ID of the movie. Example: <code>19</code></p>
+<p>The ID of the movie. Example: <code>11</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -804,10 +804,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="body"                data-endpoint="POSTapi-movies--movie_id--comments"
-               value="laudantium"
+               value="nostrum"
                data-component="body">
     <br>
-<p>The body of the comment. Example: <code>laudantium</code></p>
+<p>The body of the comment. Example: <code>nostrum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>commenter_email</code></b>&nbsp;&nbsp;
@@ -815,10 +815,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="commenter_email"                data-endpoint="POSTapi-movies--movie_id--comments"
-               value="aida.kris@example.org"
+               value="zoconnell@example.net"
                data-component="body">
     <br>
-<p>email The email of the commenter. Example: <code>aida.kris@example.org</code></p>
+<p>email The email of the commenter. Example: <code>zoconnell@example.net</code></p>
         </div>
         </form>
 
@@ -839,14 +839,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/genres" \
+    --get "http://localhost:8080/api/genres" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/genres"
+    "http://localhost:8080/api/genres"
 );
 
 const headers = {
@@ -954,14 +954,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/movies" \
+    --get "http://localhost:8080/api/movies" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies"
+    "http://localhost:8080/api/movies"
 );
 
 const headers = {
@@ -1363,14 +1363,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/movies/1" \
+    --get "http://localhost:8080/api/movies/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies/1"
+    "http://localhost:8080/api/movies/1"
 );
 
 const headers = {
@@ -1668,17 +1668,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the movie. Example: <code>1</code></p>
             </div>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>movie_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="movie_id"                data-endpoint="GETapi-movies--id-"
-               value="19"
-               data-component="url">
-    <br>
-<p>The ID of the movie. Example: <code>19</code></p>
-            </div>
                     </form>
 
                     <h2 id="movies-POSTapi-movies">Store a newly created movie into db, save cover_img into cover image folder and create PDF by Queue Job.</h2>
@@ -1695,21 +1684,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/movies" \
+    "http://localhost:8080/api/movies" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=voluptas"\
-    --form "summary=saepe"\
-    --form "genre_id=19"\
-    --form "author_id=7"\
-    --form "tag_ids[]=ea"\
-    --form "imdb_rating=17"\
-    --form "cover_image=@/tmp/phpG1rqk1" </code></pre></div>
+    --form "title=et"\
+    --form "summary=voluptatem"\
+    --form "genre_id=9"\
+    --form "author_id=9"\
+    --form "tag_ids[]=7"\
+    --form "imdb_rating=8"\
+    --form "cover_image=@/tmp/phpZTEySY" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies"
+    "http://localhost:8080/api/movies"
 );
 
 const headers = {
@@ -1718,12 +1707,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'voluptas');
-body.append('summary', 'saepe');
-body.append('genre_id', '19');
-body.append('author_id', '7');
-body.append('tag_ids[]', 'ea');
-body.append('imdb_rating', '17');
+body.append('title', 'et');
+body.append('summary', 'voluptatem');
+body.append('genre_id', '9');
+body.append('author_id', '9');
+body.append('tag_ids[]', '7');
+body.append('imdb_rating', '8');
 body.append('cover_image', document.querySelector('input[name="cover_image"]').files[0]);
 
 fetch(url, {
@@ -1805,10 +1794,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-movies"
-               value="voluptas"
+               value="et"
                data-component="body">
     <br>
-<p>The title of the movie. Example: <code>voluptas</code></p>
+<p>The title of the movie. Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>summary</code></b>&nbsp;&nbsp;
@@ -1816,10 +1805,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="summary"                data-endpoint="POSTapi-movies"
-               value="saepe"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>The summary of the movie. Example: <code>saepe</code></p>
+<p>The summary of the movie. Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cover_image</code></b>&nbsp;&nbsp;
@@ -1830,7 +1819,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>The cover_image of the movie. Example: <code>/tmp/phpG1rqk1</code></p>
+<p>The cover_image of the movie. Example: <code>/tmp/phpZTEySY</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre_id</code></b>&nbsp;&nbsp;
@@ -1838,10 +1827,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="genre_id"                data-endpoint="POSTapi-movies"
-               value="19"
+               value="9"
                data-component="body">
     <br>
-<p>The genre_id of the movie. Example: <code>19</code></p>
+<p>The genre_id of the movie. Example: <code>9</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>author_id</code></b>&nbsp;&nbsp;
@@ -1849,19 +1838,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="author_id"                data-endpoint="POSTapi-movies"
-               value="7"
+               value="9"
                data-component="body">
     <br>
-<p>The author_id of the movie. Example: <code>7</code></p>
+<p>The author_id of the movie. Example: <code>9</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>tag_ids</code></b>&nbsp;&nbsp;
-<small>string[]</small>&nbsp;
+<small>integer[]</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="tag_ids[0]"                data-endpoint="POSTapi-movies"
+                <input type="number" style="display: none"
+               step="any"               name="tag_ids[0]"                data-endpoint="POSTapi-movies"
                data-component="body">
-        <input type="text" style="display: none"
+        <input type="number" style="display: none"
                name="tag_ids[1]"                data-endpoint="POSTapi-movies"
                data-component="body">
     <br>
@@ -1873,10 +1862,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="imdb_rating"                data-endpoint="POSTapi-movies"
-               value="17"
+               value="8"
                data-component="body">
     <br>
-<p>The imdb_rating of the movie. Example: <code>17</code></p>
+<p>The imdb_rating of the movie. Example: <code>8</code></p>
         </div>
         </form>
 
@@ -1894,14 +1883,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/movies/1" \
+    "http://localhost:8080/api/movies/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies/1"
+    "http://localhost:8080/api/movies/1"
 );
 
 const headers = {
@@ -1998,10 +1987,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="movie_id"                data-endpoint="DELETEapi-movies--id-"
-               value="15"
+               value="3"
                data-component="url">
     <br>
-<p>The ID of the movie. Example: <code>15</code></p>
+<p>The ID of the movie. Example: <code>3</code></p>
             </div>
                     </form>
 
@@ -2019,21 +2008,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/movies/2" \
+    "http://localhost:8080/api/movies/18" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "title=blanditiis"\
-    --form "summary=vero"\
-    --form "genre_id=6"\
-    --form "author_id=2"\
-    --form "tag_ids[]=voluptatem"\
-    --form "imdb_rating=12"\
-    --form "cover_image=@/tmp/phpDIcKk0" </code></pre></div>
+    --form "title=eligendi"\
+    --form "summary=qui"\
+    --form "genre_id=2"\
+    --form "author_id=4"\
+    --form "tag_ids[]=6"\
+    --form "imdb_rating=4"\
+    --form "cover_image=@/tmp/phpav5FCZ" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/movies/2"
+    "http://localhost:8080/api/movies/18"
 );
 
 const headers = {
@@ -2042,12 +2031,12 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('title', 'blanditiis');
-body.append('summary', 'vero');
-body.append('genre_id', '6');
-body.append('author_id', '2');
-body.append('tag_ids[]', 'voluptatem');
-body.append('imdb_rating', '12');
+body.append('title', 'eligendi');
+body.append('summary', 'qui');
+body.append('genre_id', '2');
+body.append('author_id', '4');
+body.append('tag_ids[]', '6');
+body.append('imdb_rating', '4');
 body.append('cover_image', document.querySelector('input[name="cover_image"]').files[0]);
 
 fetch(url, {
@@ -2129,10 +2118,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="movie_id"                data-endpoint="POSTapi-movies--movie_id-"
-               value="2"
+               value="18"
                data-component="url">
     <br>
-<p>The ID of the movie. Example: <code>2</code></p>
+<p>The ID of the movie. Example: <code>18</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2141,10 +2130,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="title"                data-endpoint="POSTapi-movies--movie_id-"
-               value="blanditiis"
+               value="eligendi"
                data-component="body">
     <br>
-<p>The title of the movie. Example: <code>blanditiis</code></p>
+<p>The title of the movie. Example: <code>eligendi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>summary</code></b>&nbsp;&nbsp;
@@ -2152,10 +2141,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="summary"                data-endpoint="POSTapi-movies--movie_id-"
-               value="vero"
+               value="qui"
                data-component="body">
     <br>
-<p>The summary of the movie. Example: <code>vero</code></p>
+<p>The summary of the movie. Example: <code>qui</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cover_image</code></b>&nbsp;&nbsp;
@@ -2166,7 +2155,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>The cover_image of the movie. Example: <code>/tmp/phpDIcKk0</code></p>
+<p>The cover_image of the movie. Example: <code>/tmp/phpav5FCZ</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>genre_id</code></b>&nbsp;&nbsp;
@@ -2174,10 +2163,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="genre_id"                data-endpoint="POSTapi-movies--movie_id-"
-               value="6"
+               value="2"
                data-component="body">
     <br>
-<p>The genre_id of the movie. Example: <code>6</code></p>
+<p>The genre_id of the movie. Example: <code>2</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>author_id</code></b>&nbsp;&nbsp;
@@ -2185,19 +2174,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="author_id"                data-endpoint="POSTapi-movies--movie_id-"
-               value="2"
+               value="4"
                data-component="body">
     <br>
-<p>The author_id of the movie. Example: <code>2</code></p>
+<p>The author_id of the movie. Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>tag_ids</code></b>&nbsp;&nbsp;
-<small>string[]</small>&nbsp;
+<small>integer[]</small>&nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="tag_ids[0]"                data-endpoint="POSTapi-movies--movie_id-"
+                <input type="number" style="display: none"
+               step="any"               name="tag_ids[0]"                data-endpoint="POSTapi-movies--movie_id-"
                data-component="body">
-        <input type="text" style="display: none"
+        <input type="number" style="display: none"
                name="tag_ids[1]"                data-endpoint="POSTapi-movies--movie_id-"
                data-component="body">
     <br>
@@ -2209,10 +2198,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="imdb_rating"                data-endpoint="POSTapi-movies--movie_id-"
-               value="12"
+               value="4"
                data-component="body">
     <br>
-<p>The imdb_rating of the movie. Example: <code>12</code></p>
+<p>The imdb_rating of the movie. Example: <code>4</code></p>
         </div>
         </form>
 
@@ -2233,14 +2222,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tags" \
+    --get "http://localhost:8080/api/tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tags"
+    "http://localhost:8080/api/tags"
 );
 
 const headers = {

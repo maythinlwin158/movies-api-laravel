@@ -32,7 +32,7 @@ endpoints:
         name: name
         description: 'The name of the user.'
         required: true
-        example: eaque
+        example: atque
         type: string
         enumValues: []
         custom: []
@@ -40,7 +40,7 @@ endpoints:
         name: email
         description: 'The email of the user.'
         required: true
-        example: diego.hermiston@example.org
+        example: cfritsch@example.net
         type: string
         enumValues: []
         custom: []
@@ -48,14 +48,14 @@ endpoints:
         name: password
         description: 'The password of the user.'
         required: true
-        example: 'c>(@9CEoGGs}k<4'
+        example: '|y[)Gg'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      name: eaque
-      email: diego.hermiston@example.org
-      password: 'c>(@9CEoGGs}k<4'
+      name: atque
+      email: cfritsch@example.net
+      password: '|y[)Gg'
     fileParameters: []
     responses:
       -
@@ -97,7 +97,7 @@ endpoints:
         name: email
         description: 'The email of the user.'
         required: true
-        example: edna11@example.net
+        example: noemie58@example.com
         type: string
         enumValues: []
         custom: []
@@ -105,13 +105,13 @@ endpoints:
         name: password
         description: 'The password of the user.'
         required: true
-        example: "6b'<aG8q`f,i+$"
+        example: '2jrON"?n.3X'
         type: string
         enumValues: []
         custom: []
     cleanBodyParameters:
-      email: edna11@example.net
-      password: "6b'<aG8q`f,i+$"
+      email: noemie58@example.com
+      password: '2jrON"?n.3X'
     fileParameters: []
     responses:
       -

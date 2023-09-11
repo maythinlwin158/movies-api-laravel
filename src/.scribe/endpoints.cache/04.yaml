@@ -70,17 +70,8 @@ endpoints:
         type: integer
         enumValues: []
         custom: []
-      movie_id:
-        name: movie_id
-        description: 'The ID of the movie.'
-        required: true
-        example: 19
-        type: integer
-        enumValues: []
-        custom: []
     cleanUrlParameters:
       id: 1
-      movie_id: 19
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -126,7 +117,7 @@ endpoints:
         name: title
         description: 'The title of the movie.'
         required: true
-        example: voluptas
+        example: et
         type: string
         enumValues: []
         custom: []
@@ -134,7 +125,7 @@ endpoints:
         name: summary
         description: 'The summary of the movie.'
         required: true
-        example: saepe
+        example: voluptatem
         type: string
         enumValues: []
         custom: []
@@ -150,7 +141,7 @@ endpoints:
         name: genre_id
         description: 'The genre_id of the movie.'
         required: true
-        example: 19
+        example: 9
         type: integer
         enumValues: []
         custom: []
@@ -158,7 +149,7 @@ endpoints:
         name: author_id
         description: 'The author_id of the movie.'
         required: true
-        example: 7
+        example: 9
         type: integer
         enumValues: []
         custom: []
@@ -167,26 +158,26 @@ endpoints:
         description: 'The tag_ids of the movie.'
         required: true
         example:
-          - ea
-        type: 'string[]'
+          - 7
+        type: 'integer[]'
         enumValues: []
         custom: []
       imdb_rating:
         name: imdb_rating
         description: 'The imdb_rating of the movie.'
         required: true
-        example: 17
+        example: 8
         type: integer
         enumValues: []
         custom: []
     cleanBodyParameters:
-      title: voluptas
-      summary: saepe
-      genre_id: 19
-      author_id: 7
+      title: et
+      summary: voluptatem
+      genre_id: 9
+      author_id: 9
       tag_ids:
-        - ea
-      imdb_rating: 17
+        - 7
+      imdb_rating: 8
     fileParameters:
       cover_image: null
     responses:
@@ -233,13 +224,13 @@ endpoints:
         name: movie_id
         description: 'The ID of the movie.'
         required: true
-        example: 15
+        example: 3
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
       id: 1
-      movie_id: 15
+      movie_id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -281,12 +272,12 @@ endpoints:
         name: movie_id
         description: 'The ID of the movie.'
         required: true
-        example: 2
+        example: 18
         type: integer
         enumValues: []
         custom: []
     cleanUrlParameters:
-      movie_id: 2
+      movie_id: 18
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -294,7 +285,7 @@ endpoints:
         name: title
         description: 'The title of the movie.'
         required: true
-        example: blanditiis
+        example: eligendi
         type: string
         enumValues: []
         custom: []
@@ -302,7 +293,7 @@ endpoints:
         name: summary
         description: 'The summary of the movie.'
         required: true
-        example: vero
+        example: qui
         type: string
         enumValues: []
         custom: []
@@ -318,7 +309,7 @@ endpoints:
         name: genre_id
         description: 'The genre_id of the movie.'
         required: true
-        example: 6
+        example: 2
         type: integer
         enumValues: []
         custom: []
@@ -326,7 +317,7 @@ endpoints:
         name: author_id
         description: 'The author_id of the movie.'
         required: true
-        example: 2
+        example: 4
         type: integer
         enumValues: []
         custom: []
@@ -335,26 +326,26 @@ endpoints:
         description: 'The tag_ids of the movie.'
         required: true
         example:
-          - voluptatem
-        type: 'string[]'
+          - 6
+        type: 'integer[]'
         enumValues: []
         custom: []
       imdb_rating:
         name: imdb_rating
         description: 'The imdb_rating of the movie.'
         required: true
-        example: 12
+        example: 4
         type: integer
         enumValues: []
         custom: []
     cleanBodyParameters:
-      title: blanditiis
-      summary: vero
-      genre_id: 6
-      author_id: 2
+      title: eligendi
+      summary: qui
+      genre_id: 2
+      author_id: 4
       tag_ids:
-        - voluptatem
-      imdb_rating: 12
+        - 6
+      imdb_rating: 4
     fileParameters:
       cover_image: null
     responses:

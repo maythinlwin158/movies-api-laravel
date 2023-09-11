@@ -48,7 +48,7 @@ class MovieController extends Controller
      * @bodyParam author_id integer required The author_id of the movie.
      * @bodyParam imdb_rating integer required The imdb_rating of the movie.
      * @bodyParam cover_image file required The cover_image of the movie.
-     * @bodyParam tag_ids array required The tag_ids of the movie.
+     * @bodyParam tag_ids integer[] required The tag_ids of the movie.
      *
      * @return JsonResponse
      * @response {"status":200,"message":"Saved"}
@@ -82,7 +82,6 @@ class MovieController extends Controller
     /**
      * Display the movie detail.
      *
-     * @urlParam movie_id integer required The ID of the movie.
      *
      * @return JsonResponse
      * @response {"status":200,"message":"Saved","data":{"id":2,"title":"Batman Begins","summary":"This is a superhero movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":5,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":1,"name":"Movie"},{"id":5,"name":"Thriller"}],"comments":[]},"related_movies":[{"id":3,"title":"The Dark Night","summary":"This is a superhero movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":5,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":1,"name":"Movie"},{"id":5,"name":"Thriller"}]},{"id":4,"title":"The NUN","summary":"This is horror movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":5,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":9,"name":"Horror"},"author":{"id":3,"name":"John"},"tags":[{"id":1,"name":"Movie"},{"id":3,"name":"Ghost Story"}]},{"id":1,"title":"Barbie","summary":"Barbie suffers a crisis that leads her to question her world and her existence.","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":4,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":6,"name":"Fantasy"},"author":{"id":2,"name":"Marry"},"tags":[{"id":1,"name":"Movie"},{"id":4,"name":"Cartoon"}]},{"id":5,"title":"The Flash","summary":"Time travel movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":3,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":2,"name":"Series"}]},{"id":7,"title":"Blue Beetle","summary":"This is Blue Beetle movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":3,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":2,"name":"Series"},{"id":5,"name":"Thriller"}]},{"id":9,"title":"Spider-Man: Across the Spider-Verse","summary":"Spider-Man: Across the Spider-Verse movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":3,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":2,"name":"Series"},{"id":5,"name":"Thriller"}]},{"id":12,"title":"Transformers: Rise of the Beasts","summary":"Transformers: Rise of the Beasts movie","cover_image":"https://movies.test/cover_images/I9LkyHG5vU2uJOelthzmXJn1cfqiyeEQNwFhnjrK.png","imdb_rating":3,"pdf_link":"https://movies.test/pdf_links/1.pdf","genre":{"id":2,"name":"Superhero"},"author":{"id":5,"name":"Stan Lee"},"tags":[{"id":2,"name":"Series"},{"id":5,"name":"Thriller"}]}]}
@@ -108,7 +107,7 @@ class MovieController extends Controller
      * @bodyParam author_id integer required The author_id of the movie.
      * @bodyParam imdb_rating integer required The imdb_rating of the movie.
      * @bodyParam cover_image file required The cover_image of the movie.
-     * @bodyParam tag_ids array required The tag_ids of the movie.
+     * @bodyParam tag_ids integer[] required The tag_ids of the movie.
      *
      * @return JsonResponse
      * @response {"status":200,"message":"Saved"}
